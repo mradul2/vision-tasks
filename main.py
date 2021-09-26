@@ -61,4 +61,3 @@ result = cv2.warpPerspective(a2, H, (width, height))
 result[0:a1.shape[0], 0:a1.shape[1]] = a1
 
 plt.imshow(result)
-plt.show()
