@@ -7,10 +7,8 @@ Report: [Link](https://docs.google.com/document/d/1ASMuHsMyIP9ura363d7i0G01wRINR
 ## Requirements
 
 ```bash
-pip install opencv-python
 pip install opencv-contrib-python==3.4.2.17
 pip install argparse
-pip install numpy
 git clone https://github.com/mradul2/vision-tasks
 ```
 
