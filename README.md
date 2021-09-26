@@ -14,7 +14,7 @@ pip install numpy
 git clone https://github.com/mradul2/vision-tasks
 ```
 
-`opencv-contrib-python` is installed for using SIFT detector.
+`opencv-contrib-python` is installed for implementing SIFT detection algorithm.
 
 ## Installation
 
@@ -22,15 +22,15 @@ git clone https://github.com/mradul2/vision-tasks
 git clone https://github.com/mradul2/vision-tasks
 ```
 
-### Usage
+## Usage
 
 ```bash
 python3 main.py [--a1 IMAGE1] [--a2 IMAGE2]
 ```
 
-### Demo
+## Demo
 
-#### Input Images
+### Input Images
 
 Template Image
 
@@ -40,7 +40,7 @@ Transformed Image
 
 <img src="assets/2.png" alt="2" width="400"/>
 
-#### Detected Keypoints
+### Detected Keypoints
 
 Template Image
 
@@ -50,11 +50,11 @@ Transformed Image
 
 <img src="assets/4.png" alt="4" width="400"/>
 
-#### Matched Keypoints
+### Matched Keypoints
 
 <img src="assets/5.png" alt="5" width="800"/>
 
-#### Stitched Image
+### Stitched Image
 
 <img src="assets/6.png" alt="6" width="800"/>
 

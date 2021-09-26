@@ -25,7 +25,7 @@ plt.imshow(a1)
 plt.imshow(a2)
 
 # Creating SIFT detector object 
-sift = cv2.xfeatures2d.SIFT_create()
+sift = cv2.ORB_create()
 
 # Finding Keypoints and Descriptors using SIFT detector 
 keypoints1, descriptors1 = sift.detectAndCompute(a1,None)
