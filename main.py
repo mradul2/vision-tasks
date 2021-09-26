@@ -20,6 +20,10 @@ a2 = cv2.imread(args.a2).astype('uint8')
 gray1 = cv2.cvtColor(a1, cv2.COLOR_RGB2GRAY)
 gray2 = cv2.cvtColor(a2, cv2.COLOR_RGB2GRAY)
 
+cv2.imshow("Image 1", a1)
+cv2.imshow("Image 2", a2)
+cv2.waitKey(0)
+
 # Creating SIFT detector object 
 sift = cv2.ORB_create()
 
@@ -28,6 +32,10 @@ keypoints1, descriptors1 = sift.detectAndCompute(a1,None)
 a_1 = cv2.drawKeypoints(gray1,keypoints1, None, color=(255,0,0))
 keypoints2, descriptors2 = sift.detectAndCompute(a2,None)
 a_2 = cv2.drawKeypoints(gray2,keypoints2, None, color=(255,0,0))
+
+cv2.imshow("Keypoints 1", a_1)
+cv2.imshow("Keypoints 2", a_2)
+cv2.waitKey(0)
 
 # Creating Brute Force Matcher object with L2 Norm 
 bf = cv2.BFMatcher(cv2.NORM_L2, crossCheck=True)
@@ -40,6 +48,9 @@ matches = sorted(matches, key = lambda x:x.distance)
 matches = matches[:80]
 
 a_matched = cv2.drawMatches(a1, keypoints1, a2, keypoints2, matches ,None,flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
+
+cv2.imshow("Matched Keypointa", a_matched)
+cv2.waitKey(0)
 
 # Extracting coordinates from each Keypoint
 keypoints1_pt = [kp.pt for kp in keypoints1]
@@ -60,3 +71,4 @@ result = cv2.warpPerspective(a2, H, (width, height))
 result[0:a1.shape[0], 0:a1.shape[1]] = a1
 
 cv2.imshow("Output", result)
+cv2.waitKey(0)
