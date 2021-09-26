@@ -52,8 +52,8 @@ Transformed Image
 
 #### Matched Keypoints
 
-<img src="assets/5.png" alt="4" width="800"/>
+<img src="assets/5.png" alt="5" width="800"/>
 
 #### Stitched Image
 
-<img src="assets/5.png" alt="4" width="800"/>
+<img src="assets/6.png" alt="6" width="800"/>
