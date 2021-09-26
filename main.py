@@ -1,6 +1,5 @@
 # Importing Relevant Libraries 
 import cv2
-from matplotlib import pyplot as plt 
 import numpy as np
 
 import argparse
@@ -60,4 +59,4 @@ height = a2.shape[0]
 result = cv2.warpPerspective(a2, H, (width, height))
 result[0:a1.shape[0], 0:a1.shape[1]] = a1
 
-plt.imshow(result)
+cv2.imshow("Output", result)
