@@ -69,7 +69,4 @@ height = a2.shape[0]
 result = cv2.warpPerspective(a2, H, (width, height))
 result[0:a1.shape[0], 0:a1.shape[1]] = a1
 
-plt.figure(figsize=(25,10))
 plt.imshow(result)
-
-plt.show()
