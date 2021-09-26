@@ -21,6 +21,9 @@ a2 = cv2.imread(args.a2).astype('uint8')
 gray1 = cv2.cvtColor(a1, cv2.COLOR_RGB2GRAY)
 gray2 = cv2.cvtColor(a2, cv2.COLOR_RGB2GRAY)
 
+plt.imshow(a1)
+plt.imshow(a2)
+
 # Creating SIFT detector object 
 sift = cv2.xfeatures2d.SIFT_create()
 
@@ -29,6 +32,9 @@ keypoints1, descriptors1 = sift.detectAndCompute(a1,None)
 a_1 = cv2.drawKeypoints(gray1,keypoints1, None, color=(255,0,0))
 keypoints2, descriptors2 = sift.detectAndCompute(a2,None)
 a_2 = cv2.drawKeypoints(gray2,keypoints2, None, color=(255,0,0))
+
+plt.imshow(a_1)
+plt.imshow(a_2)
 
 # Creating Brute Force Matcher object with L2 Norm 
 bf = cv2.BFMatcher(cv2.NORM_L2, crossCheck=True)
@@ -41,6 +47,9 @@ matches = sorted(matches, key = lambda x:x.distance)
 matches = matches[:80]
 
 a_matched = cv2.drawMatches(a1, keypoints1, a2, keypoints2, matches ,None,flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
+
+plt.figure(figsize=(20,10))
+plt.imshow(a_matched)
 
 # Extracting coordinates from each Keypoint
 keypoints1_pt = [kp.pt for kp in keypoints1]
