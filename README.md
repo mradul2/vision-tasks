@@ -23,7 +23,7 @@ git clone https://github.com/mradul2/vision-tasks
 ## Usage
 
 ```bash
-python3 main.py [--a1 IMAGE1] [--a2 IMAGE2]
+python3 main.py [--a1 PATH_IMAGE1] [--a2 PATH_IMAGE2]
 ```
 
 ## Demo
