@@ -6,9 +6,9 @@ import numpy as np
 import argparse
 
 parser = argparse.ArgumentParser(description='.')
-parser.add_argument('a1', metavar='image',
+parser.add_argument('--a1', metavar='image', default="assets/1.png",
                     help='Enter the path for Template Image')
-parser.add_argument('a2', metavar='image',
+parser.add_argument('--a2', metavar='image', default="assets/2.png",
                     help='Enter the path for Transformation Image')
 
 args = parser.parse_args()
