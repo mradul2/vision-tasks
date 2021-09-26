@@ -57,3 +57,13 @@ Transformed Image
 #### Stitched Image
 
 <img src="assets/6.png" alt="6" width="800"/>
+
+## About
+
+`SIFT detectors` are used to detect `Keypoints` and their descriptions, furthermore Descriptor Matches are found using `Brute Force Matcher`. Then `.pt` attribute (Coordinates of Keypoints) are extracted from each Keypoints and a list of individual coordinates is created from matched descriptors for both Images. Finally `Homography Matrix` is found using those matched points and `warp perspective` is applied on the second Image to combine it with the First Image.
+
+## Refrences
+
+- Keypoints: [Link](https://docs.opencv.org/3.4/d2/d29/classcv_1_1KeyPoint.html)
+- Homography: [Link](https://docs.opencv.org/4.5.2/d9/dab/tutorial_homography.html)
+- `cv::warpPerspective`: [Link](https://docs.opencv.org/4.5.2/da/d54/group__imgproc__transform.html#gaf73673a7e8e18ec6963e3774e6a94b87)
